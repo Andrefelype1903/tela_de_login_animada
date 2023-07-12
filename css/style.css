@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+}
+
+.conteiner {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteiner i {
+    position: absolute;
+    inset: 0;
+    border: 2px solid #fff;
+    transition: 0.5s;
+}
+
+.conteiner i:nth-child(1) {
+    border-radius: 43% 57% 74% 26% / 44% 30% 70% 56% ;
+    animation: animate 6s linear infinite;
+}
+
+.conteiner i:nth-child(2) {
+    border-radius: 62% 38% 42% 58% / 52% 38% 62% 48%;
+    animation: animate2 4s linear infinite;
+}
+
+.conteiner i:nth-child(3) {
+    border-radius: 44% 56% 42% 58% / 37% 65% 35% 63%;
+    animation: animate 10s reverse infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.conteiner:hover i {
+    border: 6px solid var(--clr);
+    filter: drop-shadow(0 0 20px var(--clr));
+}
+
+.conteiner .login {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;gap: 20px;
+}
+
+.conteiner .login h2 {
+    font-size: 2em;
+    color: #fff;
+}
+
+.conteiner .login .inputBx {
+    position: relative;
+    width: 100%;
+
+}
+
+.conteiner .login .inputBx input {
+    position: relative;
+    width: 100%;
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    font-size: 1.2em;
+    color: #fff;
+    box-shadow: none;
+    outline: none;
+}
+
+.conteiner .login .inputBx input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.conteiner .login .inputBx input[type="submit"] {
+    background: linear-gradient(45deg, #ff357a, #fff172);
+    border: none;
+    cursor: pointer;
+}
+
+.conteiner .login .links {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.conteiner .login .links a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+@media screen and (max-width:480px) {
+    .conteiner {
+        width: 400px;
+        height: 400px;
+        margin:10px 10px
+    }
+}
